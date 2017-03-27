@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="energeniemihome"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!--MiHome things-->
+    <thing-type id="MiHomeSwitch">
+        <label>EnergenieMiHome Switch</label>
+        <description>Energenie Switch or Socket</description>
+
+        <channels>
+            <channel id="switch" typeId="switch"/>
+        </channels>
+        <config-description>
+        	<parameter name="id" type="text">
+        		<required>true</required>
+        		<label>MihomeId</label>
+        		<description>Item Id used by MiHome API</description></parameter>
+        	<parameter name="username" type="text">
+        		<description>username used by MiHome API</description>
+        		<label>MiHome username</label>
+        		<required>true</required></parameter>
+        	<parameter name="password" type="text">
+        		<label>MiHome password</label>
+        		<description>password used by MiHome API</description>
+        		<required>true</required>
+        	</parameter></config-description>
+    </thing-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="switch">
+        <item-type>Switch</item-type>
+        <label>MiHome Switch</label>
+        <description>MiHomeSwitch to turn on or off</description>
+    </channel-type>
+
+</thing:thing-descriptions>
