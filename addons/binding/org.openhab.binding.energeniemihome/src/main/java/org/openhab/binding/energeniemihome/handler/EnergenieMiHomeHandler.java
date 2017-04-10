@@ -86,7 +86,7 @@ public class EnergenieMiHomeHandler extends BaseThingHandler {
         try {
             url = new URL("https://mihome4u.co.uk/api/v1/subdevices/power_on?params={\"id\":" + itemId + "}");
             Base64.Encoder encoder = Base64.getEncoder();
-            String encoding = encoder.encodeToString(("mobile@datapos.co.uk:tnstaafl1").getBytes());
+            String encoding = encoder.encodeToString(("email@address.com:password").getBytes());
             URLConnection connection = url.openConnection();
             connection.setRequestProperty("User-Agent", "OpenHab command");
             connection.setRequestProperty("Authorization", "Basic " + encoding);
@@ -109,7 +109,7 @@ public class EnergenieMiHomeHandler extends BaseThingHandler {
         try {
             url = new URL("https://mihome4u.co.uk/api/v1/subdevices/power_off?params={\"id\":" + itemId + "}");
             Base64.Encoder encoder = Base64.getEncoder();
-            String encoding = encoder.encodeToString(("mobile@datapos.co.uk:tnstaafl1").getBytes());
+            String encoding = encoder.encodeToString(("email@password.com:password").getBytes());
             URLConnection connection = url.openConnection();
             connection.setRequestProperty("User-Agent", "OpenHab command");
             connection.setRequestProperty("Authorization", "Basic " + encoding);
